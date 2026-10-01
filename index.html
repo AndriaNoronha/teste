@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciador de Tarefas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E8DDC8;
+            color: #4F5D50;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #F7F2E8;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1, h2 {
+            color: #6F806F;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #AAB8A5;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 11px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #829681;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #6F806F;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            background-color: #E9EFE6;
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        li input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Gerenciador de Tarefas</h1>
+
+        <h2>Nova tarefa</h2>
+
+        <form>
+
+            <label for="paciente">Nome do paciente:</label>
+            <input
+                type="text"
+                id="paciente"
+                placeholder="Digite o nome do paciente"
+            >
+
+            <label for="idade">Idade:</label>
+            <input
+                type="number"
+                id="idade"
+                placeholder="Digite a idade"
+            >
+
+            <label for="tarefa">Nome da tarefa:</label>
+            <input
+                type="text"
+                id="tarefa"
+                placeholder="Digite sua tarefa"
+            >
+
+            <button type="button" id="adicionar">
+                Adicionar tarefa
+            </button>
+
+        </form>
+
+        <h2>Minhas tarefas</h2>
+
+        <ul id="lista"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
