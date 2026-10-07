@@ -1,14 +1,17 @@
 
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gerenciador de Tarefas</title>
+    <title>Gerenciador de Atendimentos</title>
 
     <style>
+
         body {
             font-family: Arial, sans-serif;
             background-color: #E8DDC8;
@@ -36,8 +39,8 @@
             margin-bottom: 5px;
         }
 
-        input[type="text"],
-        input[type="number"] {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             border: 1px solid #AAB8A5;
@@ -70,58 +73,198 @@
             padding: 12px;
             border-radius: 8px;
         }
-
-        li input {
-            margin-right: 10px;
-        }
+li.concluida {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
     </style>
+
 </head>
+
 
 <body>
 
     <div class="container">
 
-        <h1>Gerenciador de Tarefas</h1>
+        <h1>Gerenciador de Atendimentos</h1>
 
-        <h2>Nova tarefa</h2>
+    
+        <h2>Novo atendimento</h2>
 
-        <form>
 
-            <label for="paciente">Nome do paciente:</label>
+        <form id="form-atendimento">
+
+            <label for="paciente">
+                Nome do paciente:
+            </label>
+
             <input
                 type="text"
                 id="paciente"
                 placeholder="Digite o nome do paciente"
             >
 
-            <label for="idade">Idade:</label>
+
+            <label for="idade">
+                Idade:
+            </label>
+
             <input
                 type="number"
                 id="idade"
                 placeholder="Digite a idade"
+                min="1"
             >
 
-            <label for="tarefa">Nome da tarefa:</label>
+
+            <label for="tarefa">
+                Descrição da tarefa:
+            </label>
+
             <input
                 type="text"
                 id="tarefa"
-                placeholder="Digite sua tarefa"
+                placeholder="Ex: Realizar atendimento"
             >
 
-            <button type="button" id="adicionar">
-                Adicionar tarefa
+
+            <label for="categoria">
+                Categoria:
+            </label>
+
+            <select id="categoria">
+
+                <option value="">
+                    Selecione uma categoria
+                </option>
+
+                <option value="Atendimento">
+                    Atendimento
+                </option>
+
+                <option value="Retorno">
+                    Retorno
+                </option>
+
+                <option value="Administrativo">
+                    Administrativo
+                </option>
+
+                <option value="Estudos">
+                    Estudos
+                </option>
+
+            </select>
+
+
+            <label for="prioridade">
+                Prioridade:
+            </label>
+
+            <select id="prioridade">
+
+                <option value="">
+                    Selecione a prioridade
+                </option>
+
+                <option value="Baixa">
+                    Baixa
+                </option>
+
+                <option value="Média">
+                    Média
+                </option>
+
+                <option value="Alta">
+                    Alta
+                </option>
+
+            </select>
+
+
+            <label for="data">
+                Data da consulta:
+            </label>
+
+            <input
+                type="date"
+                id="data"
+            >
+
+<label for="horario">
+    Horário do atendimento:
+</label>
+
+<input
+    type="time"
+    id="horario"
+>
+
+<label for="pagamento">
+    Pagamento:
+</label>
+
+<select id="pagamento">
+
+    <option value="">
+        Selecione o status
+    </option>
+
+    <option value="Paga">
+        Consulta paga
+    </option>
+
+    <option value="Pendente">
+        Pagamento pendente
+    </option>
+
+</select>
+<input
+    type="time"
+    id="horario"
+>
+
+            <button type="submit" id="adicionar">
+                Adicionar atendimento
             </button>
 
         </form>
 
-        <h2>Minhas tarefas</h2>
 
-        <ul id="lista"></ul>
+        <h2>Resumo</h2>
+
+        <p>
+            Total de tarefas:
+            <span id="total-tarefas">0</span>
+        </p>
+
+        <p>
+            Tarefas pendentes:
+            <span id="tarefas-pendentes">0</span>
+        </p>
+
+        <p>
+            Tarefas concluídas:
+            <span id="tarefas-concluidas">0</span>
+        </p>
+
+
+        <h2>Meus atendimentos</h2>
+
+        <ul id="lista">
+
+            <li id="mensagem-vazia">
+                Nenhum atendimento cadastrado.
+            </li>
+
+        </ul>
 
     </div>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
 
