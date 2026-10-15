@@ -77,6 +77,29 @@ li.concluida {
     opacity: 0.6;
     text-decoration: line-through;
 }
+
+/* Estilo para cada nível de prioridade */
+.prioridade-baixa {
+    color: #4F8062;
+    background-color: #E5F2E8;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.prioridade-media {
+    color: #9A762B;
+    background-color: #F9F0D9;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.prioridade-alta {
+    color: #A34F4F;
+    background-color: #F8E5E5;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
     </style>
 
 </head>
@@ -146,12 +169,8 @@ li.concluida {
                     Retorno
                 </option>
 
-                <option value="Administrativo">
-                    Administrativo
-                </option>
-
-                <option value="Estudos">
-                    Estudos
+                <option value="Financeiro">
+                    Financeiro
                 </option>
 
             </select>
@@ -278,15 +297,9 @@ li.concluida {
             Retorno
         </option>
 
-        <option value="Administrativo">
-            Administrativo
-        </option>
+        <option value="Financeiro">Financeiro</option>
+</select>
 
-        <option value="Estudos">
-            Estudos
-        </option>
-
-    </select>
 
 </div>
         <ul id="lista">
